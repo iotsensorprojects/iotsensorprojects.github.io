@@ -1,6 +1,6 @@
 <html>
     <body>
-        <input type="checkBox">Automatic</input>
+        <button type="button" onclick="loadDoc(50)">Bypass Automatic</button>
         <button type="button" onclick="loadDoc(1)">Switch ON</button>
         <button type="button" onclick="loadDoc(100)">Switch Off</button>
 <p id="demo"></p>
@@ -22,7 +22,9 @@ function loadDoc(x) {
   };
   if(x==1)
     xhttp.open("GET", "https://api.thingspeak.com/update?api_key=5VJ4QF97E1BR3EL0&field3=100", true);
-  else
+   if(x==50)
+    xhttp.open("GET", "https://api.thingspeak.com/update?api_key=5VJ4QF97E1BR3EL0&field3=50", true);
+    if(x==100)
   xhttp.open("GET", "https://api.thingspeak.com/update?api_key=5VJ4QF97E1BR3EL0&field3=1", true);
   xhttp.send();
 }
