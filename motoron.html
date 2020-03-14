@@ -2,7 +2,7 @@
     <body>
         <button type="button" onclick="loadDoc(1)">Switch ON</button>
         <button type="button" onclick="loadDoc(100)">Switch Off</button>
-<p id="demo">dsada</p>
+<p id="demo"></p>
 
 <script>
 function loadDoc(x) {
@@ -16,6 +16,7 @@ function loadDoc(x) {
              status="Task completed";
         
       document.getElementById("demo").innerHTML = status;
+        status="";
     }
   };
   if(x==1)
