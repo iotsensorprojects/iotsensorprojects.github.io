@@ -20,9 +20,9 @@ function loadDoc(x) {
     }
   };
   if(x==1)
-    xhttp.open("GET", "https://api.thingspeak.com/update?api_key=5VJ4QF97E1BR3EL0&field3=1", true);
+    xhttp.open("GET", "https://api.thingspeak.com/update?api_key=5VJ4QF97E1BR3EL0&field3=100", true);
   else
-  xhttp.open("GET", "https://api.thingspeak.com/update?api_key=5VJ4QF97E1BR3EL0&field3=100", true);
+  xhttp.open("GET", "https://api.thingspeak.com/update?api_key=5VJ4QF97E1BR3EL0&field3=1", true);
   xhttp.send();
 }
 </script>
