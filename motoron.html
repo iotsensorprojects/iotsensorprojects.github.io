@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <button type="button" onclick="loadDoc(1)">Switch ON</button>
+        <button type="button" onclick="loadDoc(100)">Switch Off</button>
+<p id="demo">dsada</p>
+
+<script>
+function loadDoc(x) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  if(x==1)
+    xhttp.open("GET", "https://api.thingspeak.com/update?api_key=5VJ4QF97E1BR3EL0&field1=1", true);
+  else
+  xhttp.open("GET", "https://api.thingspeak.com/update?api_key=5VJ4QF97E1BR3EL0&field1=100", true);
+  xhttp.send();
+}
+</script>
+
+    </body>
+</html>
